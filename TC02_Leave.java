@@ -41,11 +41,11 @@ public static void main(String[] args) throws InterruptedException {
 		Select sel=new Select(leaveType);
 		sel.selectByVisibleText("US - Personal");
 		Thread.sleep(3000);
-		// to print the leave balance
+		
 		WebElement balance = driver.findElement(By.xpath("//div[@id=\'applyleave_leaveBalance\']"));
 		String leaves=balance.getText();
 		System.out.println(leaves.substring(0,1));
-		// to enter from,to and comment, click on apply
+		
 		WebElement fromDate = driver.findElement(By.xpath("//input[@id='applyleave_txtFromDate']"));
 		fromDate.click();
 		fromDate.sendKeys("2020-11-26");
